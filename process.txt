@@ -1,0 +1,7 @@
+sudo adduser username
+su- username
+nano process_list.sh
+#!/bin/bash ps aux
+ ps aux
+chmod +x process_list.sh
+ ls-l process_list.sh

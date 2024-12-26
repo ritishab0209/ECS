@@ -1,0 +1,23 @@
+sudo apt update
+ sudo apt install openssh-client
+ sudo apt install python3  
+
+
+
+Start python server on Metasploitable VM (victim)
+ python3-m http.server 8080 or python-m SimpleHTTPServer 8080
+
+
+
+
+
+
+
+ Use SSH to connect to victim VM from Kali VM (attacker)
+ ssh-L 9090:localhost:8080 msfadmin@<Metasploitable_IP>
+ If this does not work use the following command
+ ssh-o HostkeyAlgorithms=+ssh-rsa-L 9090:localhost:8080 msfadmin@<Metasploitable_IP>
+
+
+
+In Kali VM, Open the browser and search http://localhost:9090. You can see the content of Metasploitable VM
